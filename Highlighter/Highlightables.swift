@@ -33,9 +33,9 @@ extension UITextField: Highlightable {
 }
 
 extension UIButton: Highlightable {
-    public var textValue: String? { return titleLabel?.text }
+    public var textValue: String? { return title(for: .normal) }
     public var attributedTextValue: NSAttributedString? {
-        get { return titleLabel?.attributedText }
-        set { titleLabel?.attributedText = newValue }
+        get { return attributedTitle(for: .normal) }
+        set { setAttributedTitle(newValue, for: .normal) }
     }
 }
